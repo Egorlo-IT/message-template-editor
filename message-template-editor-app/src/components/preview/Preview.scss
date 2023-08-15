@@ -1,0 +1,51 @@
+.view-container {
+  display: flex;
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    text-transform: uppercase;
+  }
+  .label {
+    margin-bottom: 5px;
+  }
+  .textarea-text {
+    padding: 5px 10px;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    font-size: calc(7px + 1vmin);
+  }
+
+  .variables-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: unset;
+    margin: 25px 0;
+  }
+
+  .variables-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .input-top {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-block {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    outline: 1px solid var(--light);
+    padding: 10px;
+  }
+}

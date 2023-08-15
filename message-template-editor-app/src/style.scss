@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap");
+
+:root {
+  --dark: #282c34;
+  --light: #fff;
+  --accent: #e17076;
+  --green-light: #cbe573;
+  --green-dark: #95a854;
+  --blue: #003594;
+  --grey: #e0edf7;
+  --yellow-dark: #ffbf1a99;
+  --yellow-light: #f5e8c5;
+}
+
+#root {
+  height: auto;
+  font-family: "Montserrat Alternates", sans-serif;
+  outline: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(10px + 0.5vmin);
+  font-weight: 200;
+  color: var(--light);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  caret-color: transparent;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: "Montserrat Alternates", sans-serif;
+  caret-color: auto;
+  font-weight: 100;
+  animation: fadeIn 1s;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: calc(10px + 3.5vmin);
+}
+
+h2 {
+  font-size: calc(10px + 2.5vmin);
+}
+
+h3 {
+  font-size: calc(10px + 1.5vmin);
+}
+
+h4 {
+  font-size: calc(10px + 1vmin);
+}
+
+h5 {
+  font-size: calc(10px + 0.5vmin);
+}
+
+.btn {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(10px + 1vmin);
+  font-weight: 500;
+  border: 1px transparent;
+  letter-spacing: 1px;
+  padding: 7px 40px;
+  background-color: transparent;
+  transition: all 0.25s;
+  white-space: nowrap;
+  cursor: pointer;
+  animation: fadeIn 1.5s;
+}
+
+.light {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.green-dark {
+  color: var(--dark);
+  background-color: var(--green-dark);
+  &:hover {
+    color: var(--light);
+    box-shadow: 0px 0px 10px 1px var(--yellow-dark);
+    transition: all 0.25s;
+  }
+}
+
+.accent {
+  color: var(--dark);
+  background-color: var(--accent);
+  &:hover {
+    color: var(--yellow-light);
+    box-shadow: 0px 0px 10px 1px var(--yellow-dark);
+    transition: all 0.25s;
+  }
+}
+
+.yellow-dark {
+  color: var(--dark);
+  background-color: var(--yellow-dark);
+  &:hover {
+    box-shadow: 0px 0px 10px 1px var(--yellow-dark);
+    transition: all 0.25s;
+  }
+}
+
+.grey {
+  color: var(--dark);
+  background-color: var(--grey);
+  &:hover {
+    box-shadow: 0px 0px 10px 1px var(--accent);
+    transition: all 0.25s;
+  }
+}
+
+.light {
+  color: var(--dark);
+  background-color: var(--light);
+  &:hover {
+    box-shadow: 0px 0px 10px 1px var(--green-light);
+    transition: all 0.25s;
+  }
+}
+
+.blue {
+  color: var(--yellow-light);
+  background-color: var(--blue);
+  &:hover {
+    color: var(--light);
+    box-shadow: 0px 0px 10px 1px var(--yellow-dark);
+    transition: all 0.25s;
+  }
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+main {
+  background-color: var(--dark);
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  display: block;
+}
+
+.modal-text {
+  font-size: calc(10px + 1vmin);
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--light);
+}
+
+.container-modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--green-dark);
+  padding: 35px;
+  border: none;
+  border-radius: 5px;
+}
+
+.icon-cross {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.read-only {
+  caret-color: transparent;
+  cursor: default;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-small {
+    width: 150px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .btn {
+    padding: 10px 10px;
+    white-space: unset;
+  }
+}
