@@ -1,0 +1,19 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.image-404 {
+  object-fit: contain;
+  height: auto;
+}
+
+@media (max-width: 425px) {
+  .page-not-found .image-404 {
+    width: 100%;
+  }
+}
